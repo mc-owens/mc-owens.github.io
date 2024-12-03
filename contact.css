@@ -1,0 +1,57 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  background-image: url('Dance_content/02-03-24_SorchaAugustine_140419.jpg'); 
+  background-size: contain; /* Ensures the entire image is visible */    
+  background-repeat: no-repeat; /* Prevents the image from repeating */    
+  background-position: center; /* Centers the image */    
+  background-attachment: fixed; /* Keeps the image fixed during scroll */
+}
+
+/* Centering the form container */
+.form-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(211, 211, 211, 0.7); /* Semi-transparent light gray */
+  padding: 30px;
+  border-radius: 15px;
+  width: 80%;
+  max-width: 500px; /* Limit width */
+}
+
+/* Form content */
+.form-container h2 {
+  text-align: center;
+  color: white;
+}
+
+.form-container p {
+  line-height: 0.4rem;
+  text-align: center;
+  color: white;
+}
+
+/* Label and input separation */
+.form-container label {
+  color: white; /* Label text color */
+}
+
+.form-container input, 
+.form-container textarea {
+  color: black; /* Input text color always visible */
+  background-color: white; /* Input background */
+  border: 1px solid #ddd;
+}
+
+.form-container input:focus, 
+.form-container textarea:focus {
+  border-color: #007bff; /* Focus border color */
+  outline: none; /* Optional: remove default outline */
+}
+
+/* Submit button styling */
+.submit-button {
+  background-color: #efc8dc !important;
+}

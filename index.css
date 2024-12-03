@@ -1,0 +1,141 @@
+/* Navbar styling */
+.navbar {
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent navbar */
+    z-index: 1000; /* Ensure it appears above other content */
+}
+
+
+
+/* Main content starts below navbar */
+.main-content {
+    background: url('Dance_content/02-03-24_SorchaAugustine_140758.jpg') no-repeat center center fixed;
+    background-size: contain;
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white; /* Text color to stand out against the background */
+    text-align: center;
+}
+
+/* Shape container styles */
+.shape-container {
+    position: absolute; /* Position it over the main content */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust for perfect centering */
+    z-index: 2; /* Ensure it is above the background */
+}
+
+/* Base styles for shapes */
+svg {
+    overflow: visible;
+}
+circle,
+rect,
+polygon {
+    fill: none;
+    stroke: white; /* White outline for shapes */
+    stroke-width: 2;
+    opacity: 0.8;
+}
+
+/* Circle animation */
+.animated-circle {
+    animation: moveCircle 4s infinite alternate ease-in-out;
+}
+
+/* Square animation */
+.animated-square {
+    animation: moveSquare 4s infinite alternate ease-in-out;
+}
+
+/* Triangle animation */
+.animated-triangle {
+    animation: moveTriangle 4s infinite alternate ease-in-out;
+}
+
+/* Keyframe animations */
+@keyframes moveCircle {
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+    50% {
+        transform: translate(20px, 20px) scale(1.2);
+    }
+    100% {
+        transform: translate(-20px, -20px) scale(1);
+    }
+}
+
+@keyframes moveSquare {
+    0% {
+        transform: translate(0, 0) rotate(0);
+    }
+    50% {
+        transform: translate(-20px, 20px) rotate(45deg);
+    }
+    100% {
+        transform: translate(20px, -20px) rotate(0);
+    }
+}
+
+@keyframes moveTriangle {
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+    50% {
+        transform: translate(10px, -30px) scale(1.1);
+    }
+    100% {
+        transform: translate(-10px, 30px) scale(1);
+    }
+}
+
+/* Container for animated lines */
+.animated-lines {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+/* Snake-like curve animation */
+.snake-line {
+    stroke: black;
+    stroke-width: 2;
+    fill: none;
+    stroke-dasharray: 600; /* Adjust to match actual path length */
+    stroke-dashoffset: 600; /* Start hidden */
+    animation: drawSnake 2s linear infinite alternate;
+}
+
+/* Straight line animation */
+.straight-line {
+    stroke: black;
+    stroke-width: 2;
+    fill: none;
+    stroke-dasharray: 50; /* Adjust to match actual path length */
+    stroke-dashoffset: 50; /* Start hidden */
+    animation: drawLine 3s linear infinite alternate;
+}
+
+/* Keyframe animation for the snake-like curve */
+@keyframes drawSnake {
+    0% {
+        stroke-dashoffset: 600; /* Fully hidden */
+    }
+    100% {
+        stroke-dashoffset: 0; /* Fully revealed */
+    }
+}
+
+/* Keyframe animation for the straight line */
+@keyframes drawLine {
+    0% {
+        stroke-dashoffset: 50; /* Fully hidden */
+    }
+    100% {
+        stroke-dashoffset: 0; /* Fully revealed */
+    }
+}

@@ -1,0 +1,32 @@
+.navbar {
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent navbar */
+    z-index: 1000; /* Ensure it appears above other content */
+    position: relative; /* This ensures the z-index applies properly */
+}
+
+/* Set the background image and ensure it covers the whole page */
+body {
+    background: url('Dance_content/IMG_3506.JPG') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Wrapper for content to add a transparent background */
+.content-wrapper {
+    background-color: rgba(255, 255, 255, 0.8); /* White with 80% opacity */
+    padding: 0;
+    border-radius: 15px;
+    max-width: 1200px;
+    margin: 4rem;
+}
+
+
+
+/* Ensure the page content is responsive and well-spaced */
+.card {
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent card */
+}
